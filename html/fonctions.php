@@ -123,7 +123,7 @@ function totaltotal(){
     $montanttotal = 0; // on crée une variable = 0 qui nous servira a calcuer le montant total des articles via l'action ci-dessous
     foreach ($_SESSION['panier'] as $k => $v) { // on parcout le tableau panier via foreach (avec Sessions qui stocke les données indiv) avec var k associé à var v soit $key => $value ($k parcours et stock dans $v) soit $k => $v = id => 1 etc
         foreach($liste_article as $element){
-            if($element['id'] == $_SESSION['panier'][$k]['id']){ // si l'id de l'element du tableau est égal au donnees du tableau panier
+            if($element['id'] == $_SESSION['panier'][$k]['id']){ // si l'id de l'element du tableau est égal au donnees du tableau panier + lecture par rapport à ce que l'utilisateur fait sur le site
         $total=$element['prix']*$_SESSION['panier'][$k]['quantite'];
         $montanttotal=$total+$montanttotal; // nouveau montanttotal = total(donc )
     }
